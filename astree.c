@@ -314,11 +314,11 @@ static void proc(ast_t *root) {
             }
         }break;
         case FOR:{
-            insertModify( sv(left(left(right(root)))), expr(right(left(right(root)))) );
+            proc(left(right(root)));
             double ctrl = expr(left(left(root)));
             while(ctrl){
                 evaluate(right(right(root)));
-                insertModify( sv(left(right(left(root)))), expr(right(right(left(root)))) );
+                proc(right(left(root)));
                 ctrl = expr(left(left(root)));
             }
         }break;

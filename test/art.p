@@ -1,19 +1,16 @@
+// Programa generico para probar entrada salida 
+
 ART = 42.0;
 read("Tu edad?",EDAD);
+if(EDAD<=18){
+    write("Menor de edad\n");
+}else{
+    write ("Mayor de edad\n");
+}
 T = EDAD + ART ;
 write(T);
+write('\n');
 P = 3 % 2;
-write(P); write("Sin",sin(90));
+write(P); write('\n'); write("Sin=",sin(90));
 I = 0 ;
 
-while(I<5){ 
-    write(I); 
-    I = I + 1;
-    if(I==3){
-        write("TRES");
-    }
-}
-
-for(J=0;J<4;J=J+1){
-    write(J);
-}
